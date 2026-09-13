@@ -169,7 +169,7 @@ namespace GoPowered {
                 if (fn.Contains('/'))  fn = fn[(fn.LastIndexOf('/') + 1)..];
                 if (fn.Contains('\\')) fn = fn[(fn.LastIndexOf('\\') + 1)..];
 
-                if (fn.Equals(".gopowered"))
+                if (fn.Equals(".gopowered") || !(fn.EndsWith(".go") || fn.EndsWith(".gu")))
                     continue;
 
                 var path2 = path + "/" + fn;
