@@ -1,4 +1,6 @@
-﻿namespace GoPowered.Lang.Parser.Token.Expr.Target
+﻿using GoPowered.Lang.Parser.Type;
+
+namespace GoPowered.Lang.Parser.Token.Expr.Target
 {
-    public record ETConvert(string Name, IAnyExpression Expr) : IExpressionTarget;
+    public record ETConvert(IType Type, IAnyExpression Expr) : IExpressionTarget;
 }

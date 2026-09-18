@@ -9,7 +9,7 @@ namespace GoPowered.Lang.Unparser
         {
             if (target is ETConvert cast)
             {
-                output += cast.Name;
+                output += HandleType(cast.Type);
                 output += "(";
                 output += HandleAnyExpression(cast.Expr);
                 output += ")";
